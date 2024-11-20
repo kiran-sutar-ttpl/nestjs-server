@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserResponse {
+  firstName: String!
+  lastName: String!
+  email: String
+  address: String!
+  gender: String!
+  age: String
+}
+
+type Query {
+  users: [UserResponse!]!
+  usersByID(id: String!): UserResponse!
+}
+
+type Mutation {
+  createuser(createuserdto: UserDTO!): UserResponse!
+  updateuser(id: String!, updateUserDto: UserDTO!): UserResponse!
+  deleteUser(id: String!): UserResponse!
+}
+
+input UserDTO {
+  firstName: String!
+  lastName: String!
+  email: String
+  address: String!
+  gender: String!
+  age: String
+}
